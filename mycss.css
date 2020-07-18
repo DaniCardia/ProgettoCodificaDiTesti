@@ -1,0 +1,261 @@
+h1{
+    color:black;
+    font-size:50px;
+    text-align:center;
+    font-family:'Candara';
+}
+
+body{
+    background-color: lightcyan;
+    font-family:'Candara';
+}
+
+.li{
+  font-style: italic;
+  font-weight: bold;
+}
+.portionText{
+  display: block;
+}
+
+/* contenitore bottoni in alto */
+.first-container{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto;
+}
+
+/* bottoni in alto */
+#collocazione,#informazioni,#caratteristiche,#note{
+  text-align:left;
+  font-size:15px;
+  align-content:center ;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  display:none;
+}
+
+/* contenitore div bottoni */
+#div-contenuto{
+  justify-content: center;
+  grid-column-start: 4;
+  grid-column-end: 2;
+}
+
+/* stile bottoni in alto */
+button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  font-family:'Candara';
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:lightblue;
+  border: none;
+  border-radius: 15px;
+}
+
+#div-button{
+  max-width:100%;
+}
+
+
+/* contenitore testo e img lettera */
+.contenitore-grid{
+  display: grid;
+  grid-template-columns: 50% 40% ;
+}
+
+/* contenitore immagini lettera */
+#immagini{
+  height: auto;
+  vertical-align: middle;
+  padding-top: 5%;
+  width: 90%;
+  clear:both;
+  vertical-align: middle;
+  box-sizing: content-box;
+}
+
+img,.immagine {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.immagine.uno{
+  display: grid;
+}
+.immagine.due{
+  display: none;
+}
+.immagine.tre{
+  display: none;
+}
+.immagine.quattro{
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color:burlywood;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: black;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next  {font-size: 11px}
+}
+/* font testo */
+#apertura,#corpo{
+  font-size:15px;
+  width: 100%; 
+  height: auto;
+  box-sizing:content-box;
+  padding-right: 5%;
+  font-family:'papyrus';
+}
+
+#apertura{
+  text-align:right;
+
+}
+
+#corpo{
+  text-align:left;
+}
+
+/* bottoni in basso*/
+
+#bottoni {
+  width:10%;
+}
+
+#Bellini, #Florimo{
+  padding-top: 5%;
+  display:none;
+}
+
+#listaPersone{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: center;
+}
+
+#vbellini, #fflorimo{
+  width:15%;
+  border-radius: 50%;
+}
+
+#uno,#due{
+  padding: 5px 15px;
+  font-size: 20px;
+  text-align: center;
+  font-family:'Candara';
+  cursor: pointer;
+  outline: none;
+  color:black;
+  background-color:gainsboro;
+  border: none;
+  border-radius: 15px;
+  margin-top:10%;
+}
+
+.liste{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#bottone1,#bottone2{
+  align-self: center;
+} 
+
+/* contenitore footer */
+#footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color:skyblue;
+  width: 100%;
+  margin-top: 10%;
+  padding-bottom: 3%;
+}
+
+footer{
+    font-size:10px;
+    color:black;
+    height: auto;
+}
+
+#edizione{
+  text-align:right;
+  padding-right: 5%;
+  padding-top: 10%;
+}
+
+#logo{
+  width:20%;
+  opacity: 0.6;           
+}

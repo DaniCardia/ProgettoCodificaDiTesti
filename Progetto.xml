@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Daniela Cardia, matricola 542486, 
+    A.A. 2019/2020, 
+    Codifica di Testi, 
+    Lettera Bellini LL1.30
+-->
+<!-- ?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"? -->
+<!-- <?xml-stylesheet type="text/css" href="style.css"?> -->
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+                <title>Vincenzo Bellini a Francesco Florimo. Minuta di lettera. Parigi, 1° giugno 1835.</title>
+                <!--formato titolo: mittente a destinatario, tipo di lettera, luogo e data di scrittura della lettera-->
+                <author ref="#VB">Vincenzo Bellini</author>
+                <respStmt>
+                    <resp>Transcription by</resp>
+                    <name ref="#GS">Graziella Seminara</name>
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Digital Edition 
+                    <date when="2020-06">June 2020</date>
+                </edition>
+                <respStmt>
+                    <resp>Encoding by </resp>
+                    <name ref="#DC">Daniela Cardia</name>
+                </respStmt>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher> Università di Pisa - Corso di Laurea in Informatica Umanistica </publisher>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+                </availability>
+                <!-- <idno type="url">http://xxxxxx</idno>
+                <date when="yyyyyy" /> va indicato l'uri dell'edizione digitale delle lettere -->
+            </publicationStmt>
+
+            <sourceDesc>
+                <bibl source="#Seminara2017" resp="#GS" ana="443">
+                    <citedRange unit="page" from="512" to="513">512-513</citedRange>
+                </bibl>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <settlement>Catania</settlement>
+                        <repository role="museum" ref="http://www.rism.info/typo3conf/ext/user_apachesolr/result.php?q=id:30003436" n="I-CATm">Museo Belliniano Catania</repository>
+                            <!-- riferimento al catalogo delle sigle dei musei in cui è definito I-CATm -->
+                        <idno type="inventory">LL1.30</idno>
+                        <altIdentifier><idno type="collocation">In esposizione Casa Natale, sala B, vetrina 6, ripiano 1, I</idno></altIdentifier>						<!-- segnatura della singola lettera -->
+                        <!-- collocazione della lettera al museo -->
+                    </msIdentifier>
+                    
+                    <msContents>
+                        <msItem>
+                            <author xml:lang="it" ref="#VB">Vincenzo Bellini </author>
+                            <title type="uniform" xml:lang="it">
+                                <persName ref="#VB" role="composer">Vincenzo Bellini</persName>a 
+                                <persName ref="#FF" role="librettist">Francesco Florimo</persName>, in
+                                <placeName ref="#Paris">Parigi</placeName>,								
+                                <date when="1835-06-01">01 giugno 1835</date>
+                            </title>
+                            <textLang mainLang="it" otherLangs="fr">Italiano di inizio Ottocento con indirizzo in francese.</textLang>
+                        </msItem>
+                    </msContents>
+                    
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material>Carta sottile.</material>
+                                    <stamp>
+                                        E' presente un timbro illegibile sul recto verso del folio.
+                                        <!-- E' la descrizione in linguaggio naturale dei francobolli e dei timbri  -->
+                                    </stamp>
+                                    <p>
+                                        Lettera in buone condizioni fisiche, composta da un solo folio, piegato in più parti e con testo solo nel fronte e recto bianco. 
+                                        Carta sottile senza filigrana, colore beige, inchiostro nero. Sul fronte recto del folio, al centro, è presente un'annotazione da parte di un catalogatore. 
+                                        Inoltre sul fronte verso son presenti delle annotazioni d'inchiostro blu ed anche delle annotazioni non identificate di inchiostro rosso. 
+                                        Infine è presente un timbro illegibile sul recto verso del folio.
+                                        <!-- descrizione fisica della lettera -->                                    
+                                    </p>
+                                </support>
+                                
+                                <extent>
+                                    <!--  va inserita la quantità dell'oggetto, indicando in type il tipo descritto -->
+                                    <measure type="folio">1</measure>               
+                                    <dimensions unit="mm">
+                                        <height>203</height>
+                                        <width>133</width>
+                                    </dimensions>
+                                </extent> 
+                                
+                                <!-- es. folio verso a sx, folio recto a dx con suddivisioni ulteriori. -->
+                                <foliation> 
+                                    Il folio presenta segni di piegature asimmetriche.
+                                </foliation>
+                                
+                                <!-- descrizione delle condizioni fisiche di conservazione della lettera -->
+                                <condition>
+                                    <p>Lettera in buone condizioni fisiche.</p>
+                                </condition>
+
+                            </supportDesc>
+                        </objectDesc>
+
+                        <!-- descrizione delle diverse mani presenti sul documento -->
+                        <handDesc hands='4'>
+                            <handNote>
+                                <p>Scrittura a mano libera leggibile.</p>    
+                            </handNote>
+                            <handNote xml:id="h1">								<!-- indica la seconda mano del catalogatore -->
+								<p>L'annotazione, presente sul fronte recto, è probabilmente dovuta ad un catalogatore e presenta una firma di catalogo ed un testo incomprensibile.
+								</p>
+							</handNote>
+							<handNote xml:id="h2">								<!-- indica la terza mano del catalogatore-->
+								<p> L'annotazione in blu, presente sul fronte verso, sembrerebbe dovuta ad un catalogatore, e sembrerebbe rappresentare le lettere "F" e "G".
+								</p>
+							</handNote>
+                            <handNote xml:id="h3">                              <!-- indica la quarta mano del catalogatore-->
+                                <p> L'annotazione in rosso, presente sul fronte verso, sembrerebbe dovuta ad un catalogatore, i segni non sono comprensibili.
+                                </p>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+
+                    <additional>
+                        <adminInfo>
+                            <note>      <!-- descrizione del significato della segnatura della lettera -->
+                                All'interno del carteggio belliniano (LL), la segnatura LL1.30 identifica la trentesima missiva in ordine cronologico del primo sottogruppo, che corrisponde alle lettere scritte da Vincenzo Bellini.
+                                    <!-- Note aggiuntive non strutturabili con altri tag TEI -->
+                            </note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+
+                <listPerson>
+                    <head>Lista persone</head>
+                    <!-- Vincenzo Bellini -->
+                    <person xml:id="VB" sameAs="http://viaf.org/viaf/39560983"> 
+                        <persName role="composer"> 
+                            <ref target="http://data.rism.info/id/rismauthorities/pe11648 http://www.treccani.it/enciclopedia/vincenzo-bellini_(Dizionario-Biografico)"/>
+                            <forename>Vincenzo </forename>
+                            <forename>Salvatore </forename>
+                            <forename>Carmelo </forename>
+                            <forename>Francesco </forename> 
+                            <surname>Bellini</surname>
+                            <addName type="alias">Il Cigno</addName>
+                            <roleName type="honorific">Cavaliere della Legione d'onore</roleName> 
+                        </persName>
+                        <sex>M </sex>
+                        <birth>
+                            <date when="1801-11-03">3 novembre 1801</date>
+                            <placeName ref="#CT">
+                                <settlement type="municipality">Catania</settlement>
+                                <settlement type="provincia" key="CT">Catania</settlement>
+                                <country key="IT">Italia</country>
+                            </placeName>
+                        </birth>
+                        <death>
+                            <date when="1835-09-23">23 settembre 1835</date>
+                            <placeName ref="#Put">
+                                <settlement type="municipality">Puteaux</settlement>
+                                <settlement type="department" key="Paris">Paris</settlement>
+                                <country key="FR">France</country>
+                            </placeName>
+                        </death>        		
+                    </person>
+
+                    <!-- Francesco Florimo -->
+                    <person xml:id="FF" sameAs="https://viaf.org/viaf/44522632/"> 
+          	            <persName role="composer">
+          		            <ref target="https://it.wikipedia.org/wiki/Francesco_Florimo 
+                                         http://www.treccani.it/enciclopedia/francesco-florimo_(Dizionario-Biografico)//"/>
+                            <forename>Francesco</forename>
+                            <surname>Florimo</surname>
+                        </persName>
+                        <sex>M </sex>
+                        <birth>
+                            <date when="1800-10-12">12 ottobre 1800</date>
+            	            <placeName ref="#RC">
+            			        <settlement type="municipality">San Giorgio Morgeto</settlement>
+            	 		        <settlement type="provincia" key="RC">Reggio Calabria</settlement>
+            	 		        <country key="IT">Italia</country>
+            	            </placeName>
+                        </birth>
+                        <death>
+                            <date when="1888-12-18">18 dicembre 1888</date>
+             	            <placeName ref="#NA">
+            			        <settlement type="municipality">Napoli</settlement>
+            	 		        <settlement type="provincia" key="NA">Napoli</settlement>
+            	 		        <country key="IT">Italia</country>
+            	            </placeName>
+                        </death>
+		            </person>
+                </listPerson>
+
+                <listPlace>
+                    <head>Lista posti</head>
+                    <!-- Paris -->
+                    <place xml:id="Paris">
+                        <placeName ref="http://www.geonames.org/2988507 http://www.treccani.it/enciclopedia/parigi/">Paris</placeName>
+                        <country key="FR">France</country>
+                    </place>
+
+                    <!-- Puteaux -->
+                    <place xml:id="Put">
+                        <placeName ref="http://www.geonames.org/2985034 http://www.treccani.it/enciclopedia/puteaux_(Enciclopedia-Italiana)">Puteaux</placeName>
+                        <district type="arrondissement">Nanterre</district>
+                        <settlement type="city">Paris</settlement>
+                        <country key="FR">France</country>
+                        <note source="#Seminara2017" resp="#GS" ana="580">
+                            <bibl>
+                                <citedRange unit="page" from="346" to="346">346</citedRange>
+                            </bibl>
+                            <p>Puteaux era un sobborgo di 
+                                <placeName ref="#Paris">Parigi</placeName>, 
+                                immerso nel verde e situato sulla <foreign xml:lang="fr">rive gauche</foreign> della Senna. 
+                                Qui Bellini si stabilì dal 26 maggio al 1° novembre 1834 e di nuovo nel 1835 dall'11 maggio al 23 settembre (giorno della morte) nella residenza di Solomon Levy (o Lewis), un facoltoso ebreo inglese che verosimilmente aveva conosciuto nel 1830 a Milano. 
+                                Levy, che negli anni 1834-35 si trattenne stabilmente a Parigi, apparteneva alla cerchia delle più ristrette frequentazioni francesi del musicista; risiedeva in un lussuoso appartamento in Boulevard des Capucines, ma possedeva anche la residenza di Puteaux.
+                            </p>                        											
+                        </note>
+                    </place>
+
+                    <!-- Catania -->
+                    <place xml:id="CT">
+                        <placeName ref="http://www.geonames.org/2525068/catania.html http://www.treccani.it/enciclopedia/catania/">Catania</placeName>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                    <!-- Reggio Calabria -->
+                    <place xml:id="RC">
+                        <placeName ref="https://www.geonames.org/2523630/reggio-calabria.html http://www.treccani.it/enciclopedia/reggio-di-calabria">Reggio Calabria</placeName>
+                        <country key="IT">Italia</country>
+                    </place>
+
+                    <!-- Napoli -->
+                    <place xml:id="NA">
+                        <placeName ref="http://www.geonames.org/3172394 http://www.treccani.it/enciclopedia/napoli/">Napoli</placeName>
+                        <country key="IT">Italia</country>
+                    </place>
+                </listPlace>
+
+                <listBibl>
+                    <head>Lista bibliografia</head>
+                    <!-- Seminara2017 -->
+                    <bibl xml:id="Seminara2017" type="print">
+                        <editor ref="#GS">
+                        	<forename>Graziella</forename>
+                        	<surname>Seminara</surname>
+                        </editor>
+                        <title level="m">Vincenzo Bellini. Carteggi</title>
+                        <title level="s">Historiae Musicae Cultores</title>
+                     		<biblScope unit="volume">CXXXI</biblScope>
+                        <biblScope unit="page">pp. vi+622</biblScope>
+  							<pubPlace>Firenze</pubPlace>
+                        <publisher>Leo S. Olschki Editore</publisher>
+                        <date when="2017">2017</date>                       
+                    </bibl>
+                    
+                    <!-- Amore1894 -->
+                    <bibl xml:id="Amore1894" type="print">
+                        <author xml:id="AA">
+                        	<forename>Antonino</forename>
+                        	<surname>Amore</surname>
+                        </author>
+                        <title level="m">Vincenzo Bellini. Vita. Studi e ricerche</title>
+                        <pubPlace>Catania</pubPlace>
+                        <publisher>Giannotta</publisher>
+                        <date when="1894">1894</date>
+                    </bibl>
+
+                    <!-- Cambi1943 -->
+                   <bibl xml:id="Cambi1943" type="print">
+                        <author xml:id="LC"> 
+                        	<forename>Luisa</forename>
+                        	<surname>Cambi</surname> 
+                        </author>
+                        <title level="m">Bellini. Epistolario</title>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Mondadori</publisher>
+                        <date when="1943">1943</date>
+                    </bibl>
+
+                    <!-- Neri 2005 -->
+                    <bibl xml:id="Neri2005" type="print">
+                        <author xml:id="CN">
+                        	<forename>Carmelo</forename>
+                        	<surname>Neri</surname>
+                        </author>
+                        <title level="m">Vincenzo Bellini. Nuovo Epistolario. 1819-1835</title>
+                        <pubPlace>Catania</pubPlace>
+                        <publisher>Agorà</publisher>
+                        <date when="2005">2005</date>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#VB" role="composer">Vincenzo Bellini</persName>
+                    <placeName>unknown</placeName>
+                    <date>unknown</date>	
+                </correspAction>
+                <correspAction type="receveid">
+                    <persName ref="#FF" role="composer">Francesco Florimo</persName>
+                    <placeName>unknown</placeName>
+                    <date>unknown</date>
+                </correspAction>
+                <correspContext>
+					<p>Non è presente un contesto di riferimento</p>
+				</correspContext>
+            </correspDesc>
+
+            <textClass>
+                <keywords scheme="http://thes.bncf.firenze.sbn.it">			
+                    <term resp="#GS"> Minuta di lettera </term>					
+                </keywords>
+            </textClass>
+
+            <langUsage>
+                <language ident="it">Italiano di inizio Ottocento</language>
+                <language ident="fr">Francese</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+
+    <facsimile>
+        <surface n="1" xml:id="LL1.30_folio_1fr">			<!-- FRONTE RECTO -->
+            <graphic url='LL1.30_0001.jpg' width='1645px' height='2475px' />
+            <zone ulx="90" uly="60" lrx="1567" lry="161" rendition="Line" xml:id="LL1.30_line_1fr_01"/>
+            <zone ulx="90" uly="145" lrx="1610" lry="285" rendition="Line" xml:id="LL1.30_line_1fr_02"/>
+            <zone ulx="90" uly="242" lrx="1610" lry="365" rendition="Line" xml:id="LL1.30_line_1fr_03"/>
+            <zone ulx="90" uly="360" lrx="1610" lry="460" rendition="Line" xml:id="LL1.30_line_1fr_04"/>
+            <zone ulx="90" uly="435" lrx="1610" lry="540" rendition="Line" xml:id="LL1.30_line_1fr_05"/>
+            <zone ulx="90" uly="530" lrx="1610" lry="630" rendition="Line" xml:id="LL1.30_line_1fr_06"/>
+            <zone ulx="90" uly="620" lrx="1610" lry="740" rendition="Line" xml:id="LL1.30_line_1fr_07"/>
+            <zone ulx="90" uly="715" lrx="1610" lry="840" rendition="Line" xml:id="LL1.30_line_1fr_08"/>
+
+            <zone ulx="880" uly="1054" lrx="1236" lry="2034" rendition="HotSpot" xml:id="LL1.30_hotspot_1fr_01"/>
+            <!-- Annotazione dovuta ad un catalogatore  -->
+            <zone ulx="84" uly="40" lrx="310" lry="253" rendition="HotSpot" xml:id="LL1.30_hotspot_1fr_02"/>
+            <!-- Timbro parzialmente visibile in alto a sinistra -->
+        </surface>
+
+        <surface n="2" xml:id="LL1.30_folio_1rr">			<!-- RETRO RECTO -->
+            <graphic url="LL1.30_0002.jpg" width='1685px' height='2482px' />  
+        </surface>
+
+        <surface n="3" xml:id="LL1.30_folio_1rv">			<!-- RETRO VERSO -->
+            <graphic url="LL1.30_0003.jpg" width='1645px' height='2475px' />
+        </surface>
+
+        <surface n="4" xml:id="LL1.30_folio_1fv">			<!-- FRONTE VERSO -->
+            <graphic url="LL1.30_0004.jpg" width='1645px' height='2482px' />
+            
+            <zone ulx="400" uly="2155" lrx="580" lry="2294" rendition="HotSpot" xml:id="LL1.30_hotspot_1fv_01"/>
+            <!-- Annotazione d'inchiostro blu -->
+
+            <zone ulx="509" uly="219" lrx="1415" lry="684" rendition="HotSpot" xml:id="LL1.30_hotspot_1fv_02"/>
+            <!-- Annotazione d'inchiostro rosso-->
+        </surface>
+    </facsimile>
+
+    <text type="minuteOfLetter" xml:id="LL1.30" subtype="manuscript" n="LL1.30">
+        <body xml:lang="it">
+            <div type="fronte-recto">
+                <pb n="1" xml:id="LL1.30_fol_1fr" facs="#LL1.30_folio_1fr"/>
+                <div type="opener" n="o_01">
+                    <dateline n="ab_01">
+                        <s type="sentence" n="s_01">
+                            <lb xml:id="LL1.30_lb_1fr_01" n="1" facs="#LL1.30_line_1fr_01"/>
+                            <date when="1835-01-06">1: Giugno - 35 </date> 
+                            <address xml:lang="fr">
+                                <addrLine>
+                                    <placeName>N. 19:bis rampe </placeName>
+                                </addrLine>
+                                <lb xml:id="LL1.30_lb_1fr_02" n="2" facs="#LL1.30_line_1fr_02"/>
+                                <addrLine n="1">
+                                    <hi rend="align(right)">
+                                        <placeName>de Neuilly à </placeName>
+                                        <hi rend="underline"> 
+                                            <placeName ref="#Put">Puteaux</placeName>
+                                        </hi>
+                                    </hi>
+                                </addrLine>
+                                <lb xml:id="LL1.30_lb_1fr_03" n="3" facs="#LL1.30_line_1fr_03"/>
+                                <addrLine n="2">
+                                    <hi rend="underline align(right)">près de 
+                                        <placeName ref="#Paris">Paris.</placeName>
+                                    </hi>
+                                </addrLine>
+                            </address>
+                    </s>
+                    </dateline>
+                </div>
+
+                <div type="letter-body" n="t_01">
+                    <salute n="ab_02">
+                        <s type="sentence" n="s_02">
+                            <lb xml:id="LL1.30_lb_1fr_03b" n="3" facs="#LL1.30_line_1fr_03"/> 
+                                <lb corresp="#LL1.30_lb_1fr_03"/>
+                                <hi rend="align(left)">Mio caro
+                                    <persName ref="#FF" role="composer">Florimo</persName>
+                                </hi>
+                        </s>
+                    </salute>
+                    
+                    <ab type="parag" rend="first_line_indented" n="ab_03">
+                        <s type="sentence" n="s_03">
+                            <lb xml:id="LL1.30_lb_1fr_04" n="4" facs="#LL1.30_line_1fr_04"/>
+                            Una vera invenzione ti ha cagionato 
+                            <lb xml:id="LL1.30_lb_1fr_05" n="5" facs="#LL1.30_line_1fr_05"/>
+                            tanto dolore per lo supposto duello, e mia 
+                            <lb xml:id="LL1.30_lb_1fr_06" n="6" facs="#LL1.30_line_1fr_06" break="no"/>
+                            morte. 
+                        </s>
+                        <s type="sentence" n="s_04">
+                            Tu mi conosci bene, e sai che un
+                            <lb xml:id="LL1.30_lb_1fr_07" n="7" facs="#LL1.30_line_1fr_07"/>
+                            solo punto d’onore mi farebbe andare sul
+                            <lb xml:id="LL1.30_lb_1fr_08" n="8" facs="#LL1.30_line_1fr_08"/>
+                            terreno, o una disgrazia fatale    
+                        </s>
+                    </ab>
+
+                    <ab xml:id="LL1.30_hs_1fr_01" facs="#LL1.30_hotspot_1fr_01">
+                        <gap reason="illegible"/>
+                    </ab>
+
+                    <ab xml:id="LL1.30_hs_1fr_02" facs="#LL1.30_hotspot_1fr_02">
+                        <stamp type="postmark">
+                            <gap reason="illegible"/>
+                        </stamp>
+                    </ab>
+                </div>
+            </div>
+
+            <div type="retro-recto">
+                <pb n="2" xml:id="LL1.30_fol_1rr" facs="#LL1.30_fol_1rr"/>
+            </div>
+
+            <div type="retro-verso">
+                <pb n="3" xml:id="LL1.30_fol_1rv" facs="#LL1.30_folio_1rv"/>
+            </div>
+
+            <div type="fronte-verso">
+                <pb n="4" xml:id="LL1.30_fol_1fv" facs="#LL1.30_folio_1fv"/>
+                <ab xml:id="LL1.30_hs_1fv_01" facs="#LL1.30_hotspot_1fv_01">
+                    <gap reason="inaudible"/>
+                </ab>
+                <ab xml:id="LL1.30_hs_1fv_02" facs="#LL1.30_hotspot_1fv_02">
+                    <gap reason="inaudible"/>
+                </ab>
+            </div>
+
+            <div type="bibliography">
+                <listBibl xml:id="LL1_30_bibliography">
+                    <head>Bibliography of the letter LL1.30</head>
+                    <bibl xml:id="LL1_30_Amore">
+                        <ref target="#Amore1894">
+                            <bibl>
+                                <author>Amore</author>
+                                <date when="1894">1894</date>
+                                <citedRange unit="page" from="367" to="367">367</citedRange>
+                            </bibl>
+                        </ref>
+                    </bibl>
+                    <bibl xml:id="LL1_30_Cambi">
+                        <ref target="#Cambi1943">
+                            <bibl>
+                                <author>Cambi</author>
+                                <date when="1943">1943</date>
+                                <citedRange unit="page" from="559" to="559">559</citedRange>
+                            </bibl>
+                        </ref>
+                    </bibl>
+                    <bibl xml:id="LL1_30_Neri">
+                        <ref target="#Neri2005">
+                            <bibl>
+                                <author>Neri</author>
+                                <date when="2005">2005</date>
+                                <citedRange unit="page" from="413" to="413">413</citedRange>
+                            </bibl>
+                        </ref>
+                    </bibl>
+                    <bibl xml:id="LL1_30_Seminara">
+                        <ref target="#Seminara2017">
+                            <bibl>
+                                <author>Seminara</author>
+                                <date when="2017">2017</date>
+                                <citedRange unit="page" from="512" to="513">512-513</citedRange>
+                            </bibl>
+                        </ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
