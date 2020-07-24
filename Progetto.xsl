@@ -88,7 +88,7 @@
                 <span style="color:crimson; font-weight: bold;">Informazioni lettera:</span>
                 <li>Autore: <xsl:value-of select="tei:author" /></li>
                 <li>Destinatario:  <xsl:value-of select="tei:title/tei:persName[@ref='#FF']" /></li>
-                <li>Data:  <xsl:value-of select="tei:title/tei:date" /> </li><!--chiedere a Marco-->
+                <li>Data:  <xsl:value-of select="tei:title/tei:date" /> </li>
                 <li>Lingua lettera: <xsl:value-of select="tei:textLang" /></li>
             </ul>
         </div>
